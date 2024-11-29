@@ -4,15 +4,12 @@ set $mod Mod4
 set $term foot
 set $menu wmenu-run -N 1b1b1b -M ffffff -m 000000 -S ffffff -s 000000
 set $browser thorium-browser
+set $filemanager thunar
 set $power nwg-bar
-
-
 
 
 ### Xwayland
 xwayland enable
-
-
 
 
 
@@ -45,8 +42,6 @@ workspace 2 output HDMI-A-2
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
-
-
 
 
 
@@ -83,8 +78,6 @@ input type:keyboard xkb_numlock enabled
 
 
 
-
-
 ### Apparence
 default_border pixel 2
 default_floating_border normal
@@ -103,7 +96,6 @@ smart_gaps off
 
 
 
-
 ### Binds
 
 # Terminal
@@ -114,6 +106,10 @@ bindsym $mod+Shift+q kill
 
 # Launcher
 bindsym $mod+d exec $menu
+
+# Browser
+bindsym $mod+w exec $browser
+bindsym $mod+e exec $filemanager
 
 # Lock screen
 bindsym $mod+l exec hyprlock
