@@ -37,10 +37,10 @@ workspace 2 output HDMI-A-2
 
 ### Idle configuration
 
-exec swayidle -w \
-    timeout 300 'hyprlock' \
-    timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-    before-sleep 'hyprlock'
+# exec swayidle -w \
+#     timeout 300 'hyprlock' \
+#     timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+#     before-sleep 'hyprlock'
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -178,6 +178,13 @@ bindsym $mod+space floating toggle
 # Focus on all windows of current workspace
 bindsym $mod+a focus parent
 
+# Print Screen
+bindsym Print            exec ~/.config/sway/swayshot.sh
+bindsym Ctrl+Print       exec ~/.config/sway/swayshot.sh window
+bindsym Shift+Print      exec ~/.config/sway/swayshot.sh region
+bindsym Mod4+Print       exec ~/.config/sway/swayshot.sh display upload
+bindsym Mod4+Ctrl+Print  exec ~/.config/sway/swayshot.sh window  upload
+bindsym Mod4+Shift+Print exec ~/.config/sway/swayshot.sh region  upload
 
 # Resizing
 mode "resize" {
