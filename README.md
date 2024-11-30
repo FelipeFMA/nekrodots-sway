@@ -2,9 +2,9 @@
 
 <p id="description">My beautiful sway setup :)</p>
 
-  ![screenshot_2024-11-29_22-45-54_949831641](https://github.com/user-attachments/assets/e2333ae7-4e96-4a66-893e-c6ebbab00490)
+  ![clean](https://github.com/user-attachments/assets/e2333ae7-4e96-4a66-893e-c6ebbab00490)
 
-  ![image](https://github.com/user-attachments/assets/8f22be4c-a655-4b9e-9e7f-540cc42af048)
+  ![busy](https://github.com/user-attachments/assets/8f22be4c-a655-4b9e-9e7f-540cc42af048)
 
   
 <h2>🧐 Features</h2>
