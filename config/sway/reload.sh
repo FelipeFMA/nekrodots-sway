@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# A stupidly simple script to reload sway, waybar and swaync.
+# A stupidly simple script to reload sway, waybar, swaync and autotiling.
 # https://github.com/FelipeFMA/nekrodots-sway
 
 
@@ -28,3 +28,11 @@ sleep 0.1
 
 swaync &
 
+#######################
+
+# Reload autotiling
+killall autotiling
+
+sleep 0.1
+
+autotiling &
