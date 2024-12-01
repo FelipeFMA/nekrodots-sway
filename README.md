@@ -86,7 +86,7 @@ sudo systemctl enable tlp
 ```
 
 ```
-sudo sustemctl enable throttled
+sudo systemctl enable throttled
 ```
 
 ```
