@@ -22,7 +22,7 @@ exec rm ~/.cache/cliphist/db
 ### Output configuration
 
 # Wallpaper
-output * bg /home/felipe/Pictures/Wallpapers/folhas.jpg fill
+output * bg /home/felipe/Pictures/Wallpapers/leaves.jpg fill
 
 # Outputs
 output eDP-1 resolution 1366x768 position 0,0 
