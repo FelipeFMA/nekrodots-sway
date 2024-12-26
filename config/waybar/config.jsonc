@@ -56,7 +56,8 @@
         "format": "{icon} {capacity}% ",
         "format-charging": " {capacity}%",
         "format-plugged": " {capacity}%",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["", "", "", "", ""],
+        "tooltip": false
     },
     "battery#bat2": {
         "bat": "BAT1",
@@ -68,7 +69,8 @@
         "format": "{icon} {capacity}% ",
         "format-charging": " {capacity}%",
         "format-plugged": " {capacity}%",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["", "", "", "", ""],
+        "tooltip": false
     },
     
     "network": {
@@ -76,19 +78,18 @@
         "format-ethernet": " {ifname}: {ipaddr}/{cidr}",
         "format-linked": "{ifname} (No IP)",
         "format-disconnected": " Disconnected ",
-        "on-click": "foot ~/.config/waybar/nmtui.sh"
+        "on-click": "foot ~/.config/waybar/nmtui.sh",
+        "tooltip": false
     },
     "bluetooth": {
 	      "format": " On",
-	      "format-disabled": "󰂲 Off", // an empty format will hide the module
+	      "format-disabled": "󰂲 Off",
 	      "format-connected": "󰂱 Connected",
-	      "tooltip-format": "{controller_alias}\t{controller_address}",
-	      "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
-	      "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-	      "on-click":"blueberry"
+	      "on-click":"blueberry",
+	      "tooltip": false
     },
     "pulseaudio": {
-        "scroll-step": 1, // %, can be a float
+        "scroll-step": 1,
         "format": "  {volume}% | {format_source}",
         "format-bluetooth": "  {volume}% | {format_source}",
         "format-bluetooth-muted": "󰝟 | {format_source}",
