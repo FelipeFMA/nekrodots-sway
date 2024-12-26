@@ -18,6 +18,10 @@ exec autotiling
 exec waybar
 exec wl-paste --watch cliphist store
 exec rm ~/.cache/cliphist/db
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec /usr/lib/xdg-desktop-portal -r
+exec /usr/lib/xdg-desktop-portal-wlr
+
 
 ### Output configuration
 
@@ -34,9 +38,9 @@ workspace 2 output HDMI-A-2
 
 ### Idle configuration
 exec swayidle -w \
-    timeout 300 'hyprlock' \
+    timeout 300 '~/.config/sway/lock.sh' \
     timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-    before-sleep 'hyprlock'
+    before-sleep '~/.config/sway/lock.sh'
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
@@ -116,7 +120,7 @@ bindsym $mod+p exec nwg-bar
 bindsym $mod+v exec cliphist list | wmenu -l 25 -N 1b1b1b -M ffffff -m 000000 -S ffffff -s 000000 | cliphist decode | wl-copy
 
 # Lock screen
-bindsym $mod+l exec hyprlock
+bindsym $mod+l exec ~/.config/sway/lock.sh
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
