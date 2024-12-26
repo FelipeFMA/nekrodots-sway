@@ -44,7 +44,8 @@
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "󰃠 {percent}% "
+        "format": "󰃠 {percent}% ",
+        "tooltip": false
     },
     "battery": {
         "bat": "BAT0",
@@ -57,7 +58,8 @@
         "format-charging": " {capacity}%",
         "format-plugged": " {capacity}%",
         "format-icons": ["", "", "", "", ""],
-        "tooltip": false
+        "tooltip": "{time}",
+        "interval": 3
     },
     "battery#bat2": {
         "bat": "BAT1",
@@ -70,7 +72,8 @@
         "format-charging": " {capacity}%",
         "format-plugged": " {capacity}%",
         "format-icons": ["", "", "", "", ""],
-        "tooltip": false
+        "tooltip": "{time}",
+        "interval": 3
     },
     
     "network": {
