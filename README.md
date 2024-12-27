@@ -71,26 +71,28 @@ papirus-folders -C white
 
 <p>10. Open nwg-look and apply both the theme and the papirus icons</p>
 
-<p>11. Edit /etc/environment and put QT_QPA_PLATFORMTHEME=qt5ct</p>
+<p>11. Edit /etc/environment and put: </p>
 
-<p>12. Open bpth qt5ct and qt6ct and apply the kvantum theme and the papirus icons</p>
+  ```XDG_SESSION_TYPE=wayland```
+  ```XDG_CURRENT_DESKTOP=sway```
+  ```QT_QPA_PLATFORMTHEME=qt5ct```
+
+
+<p>12. Open both qt5ct and qt6ct and apply the kvantum theme and the papirus icons</p>
 
 <p>13. Start services (only if you need them)</p>
 
 ```
-sudo systemctl enable bluetooth
+sudo systemctl enable --now bluetooth
 ```
 
 ```
-sudo systemctl enable tlp
+sudo systemctl enable --now tlp
 ```
 
 ```
-sudo systemctl enable throttled
+sudo systemctl enable --now throttled
 ```
 
-```
-systemctl --user start clipmon
-```
 
 <p>14. That's it... Reboot and enjoy. :)</p>
