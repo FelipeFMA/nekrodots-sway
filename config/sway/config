@@ -29,8 +29,9 @@ exec /usr/lib/xdg-desktop-portal-wlr
 output * bg /home/felipe/Pictures/Wallpapers/leaves.jpg fill
 
 # Outputs
-output eDP-1 resolution 1366x768 position 0,0 
-output HDMI-A-2 mode 1920x1080@120Hz position 1366,0
+output eDP-1 mode 1366x768@60Hz position 0,0 
+output HDMI-A-2 position 1366,0
+output "AOC 24G2W1G4 ATNL4XA000265" mode 1920x1080@120Hz position 1366,0
 workspace 1 output eDP-1
 workspace 2 output HDMI-A-2
 
@@ -68,7 +69,9 @@ input "12625:16429:2.4G_Wireless_Mouse" {
 # Usual trackpad stuff
 input "1739:0:Synaptics_TM3276-022" {
     natural_scroll enabled
+    scroll_factor 0.5
     tap enabled
+    dwt disabled
 }
 
 # Enable numlock by default
@@ -84,6 +87,8 @@ input type:keyboard xkb_numlock enabled
 default_border pixel 2
 default_floating_border normal
 hide_edge_borders none
+font pango:"Roboto" Regular 12
+
 
 client.focused          #888888 #888888 #ffffff #888888 #888888
 client.focused_inactive #282828 #282828 #838383 #282828 #282828
