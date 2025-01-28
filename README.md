@@ -1,4 +1,4 @@
-<h1 align="center" id="title">Nekrodots</h1>
+<h1 align="center" id="title">nekrodots / sway</h1>
 
 <p id="description">My beautiful sway setup :)</p>
 
