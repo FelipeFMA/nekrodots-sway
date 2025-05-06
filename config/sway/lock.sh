@@ -19,9 +19,8 @@ swaylock \
   --text-clear-color ffffff \
   --text-wrong-color ff0000 \
   --text-ver-color ffffff \
-  --image ~/Pictures/Wallpapers/leaves.jpg \
+  --image ~/Pictures/Wallpapers/sky.png \
   --clock \
   --indicator \
   --timestr '%I:%M %p' \
   --datestr %d/%m/%Y \
- 

@@ -4,7 +4,6 @@ set $mod Mod4
 set $term footclient
 set $browser brave
 set $filemanager nemo
-set $power nwg-bar
 
 
 ### Xwayland
@@ -187,12 +186,9 @@ bindsym $mod+space floating toggle
 bindsym $mod+a focus parent
 
 # Print Screen
-bindsym Print            exec ~/.config/sway/swayshot.sh
-bindsym Ctrl+Print       exec ~/.config/sway/swayshot.sh window
-bindsym Shift+Print      exec ~/.config/sway/swayshot.sh region
-bindsym Mod4+Print       exec ~/.config/sway/swayshot.sh display upload
-bindsym Mod4+Ctrl+Print  exec ~/.config/sway/swayshot.sh window  upload
-bindsym Mod4+Shift+Print exec ~/.config/sway/swayshot.sh region  upload
+bindsym Print exec grim -g "$(slurp)" - | swappy -f -
+bindsym $mod+s exec grim -g "$(slurp)" - | swappy -f -
+
 
 # Resizing
 mode "resize" {
@@ -220,13 +216,14 @@ mode "xkill" {
 bindsym $mod+x mode "xkill"
 
 # Special keys to adjust volume via PulseAudio
-bindsym --locked XF86AudioMute exec pactl set-sink-mute \@DEFAULT_SINK@ toggle
-bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume \@DEFAULT_SINK@ -5%
-bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume \@DEFAULT_SINK@ +5%
+bindsym --locked XF86AudioMute exec pactl set-sink-mute \@DEFAULT_SINK@ toggle && ~/.config/dunst/volume.sh
+bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume \@DEFAULT_SINK@ -5% && ~/.config/dunst/volume.sh
+bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume \@DEFAULT_SINK@ +5% && ~/.config/dunst/volume.sh
 bindsym --locked XF86AudioMicMute exec pactl set-source-mute \@DEFAULT_SOURCE@ toggle
 
 # Special keys to adjust brightness via brightnessctl
-bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
-bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
+bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%- && ~/.config/dunst/brightness.sh
+bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+ && ~/.config/dunst/brightness.sh
+
 
 include /etc/sway/config.d/*
