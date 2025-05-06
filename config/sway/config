@@ -1,10 +1,9 @@
 ### Variables
 
 set $mod Mod4
-set $term foot
-set $menu wmenu-run -N 1b1b1b -M ffffff -m 000000 -S ffffff -s 000000
-set $browser thorium-browser
-set $filemanager thunar
+set $term footclient
+set $browser brave
+set $filemanager nemo
 set $power nwg-bar
 
 
@@ -12,10 +11,11 @@ set $power nwg-bar
 xwayland enable
 
 
-
 ### Autostart
-exec autotiling
+exec perf.sh -h
 exec waybar
+exec autotiling
+exec foot -s
 exec wl-paste --watch cliphist store
 exec rm ~/.cache/cliphist/db
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -26,14 +26,13 @@ exec /usr/lib/xdg-desktop-portal-wlr
 ### Output configuration
 
 # Wallpaper
-output * bg /home/felipe/Pictures/Wallpapers/leaves.jpg fill
+output * bg /home/felipe/Pictures/Wallpapers/sky.png fill
+
+# Mouse cursor
+seat seat0 xcursor_theme macOS 24
 
 # Outputs
-output eDP-1 mode 1366x768@60Hz position 0,0 
-output HDMI-A-2 position 1366,0
-output "AOC 24G2W1G4 ATNL4XA000265" mode 1920x1080@120Hz position 1366,0
-workspace 1 output eDP-1
-workspace 2 output HDMI-A-2
+include ~/.config/sway/outputs
 
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
@@ -109,20 +108,20 @@ smart_gaps off
 bindsym $mod+Return exec $term
 
 # Close window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # Launcher
-bindsym $mod+d exec $menu
+bindsym $mod+d exec rofi -show drun
 
 # Browser
 bindsym $mod+w exec $browser
 bindsym $mod+e exec $filemanager
 
 # Power menu
-bindsym $mod+p exec nwg-bar
+bindsym $mod+p exec /home/felipe/.config/rofi/powermenu.sh
 
 # Clipboard history
-bindsym $mod+v exec cliphist list | wmenu -l 25 -N 1b1b1b -M ffffff -m 000000 -S ffffff -s 000000 | cliphist decode | wl-copy
+bindsym $mod+v exec /home/felipe/.config/rofi/clipboard.sh
 
 # Lock screen
 bindsym $mod+l exec ~/.config/sway/lock.sh
@@ -219,7 +218,7 @@ mode "xkill" {
     bindsym Return mode "default"
 }
 bindsym $mod+x mode "xkill"
-    
+
 # Special keys to adjust volume via PulseAudio
 bindsym --locked XF86AudioMute exec pactl set-sink-mute \@DEFAULT_SINK@ toggle
 bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume \@DEFAULT_SINK@ -5%
@@ -229,7 +228,5 @@ bindsym --locked XF86AudioMicMute exec pactl set-source-mute \@DEFAULT_SOURCE@ t
 # Special keys to adjust brightness via brightnessctl
 bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
-
-
 
 include /etc/sway/config.d/*
