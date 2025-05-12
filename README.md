@@ -1,11 +1,11 @@
 # nekrodots-sway
 <p id="description">My beautiful sway setup :)</p>
 
-![clean](https://github.com/user-attachments/assets/712378ab-be1a-4022-9ff7-677d3fd4f6f5)
+![desktop](https://github.com/user-attachments/assets/7100bf0c-99f1-4064-b353-9912e5834e02)
 
-![terminal](https://github.com/user-attachments/assets/876c3fe5-ff5d-4e38-b787-db934846609e)
+![terminal](https://github.com/user-attachments/assets/a018bb5e-5291-493e-a2ad-7726016e49ef)
 
-![web](https://github.com/user-attachments/assets/e86435eb-03ec-42c4-81b1-eb02cc926ec1)
+![guis](https://github.com/user-attachments/assets/96da93a4-c892-4c4b-adad-c8fe1e16c67b)
 
   
 <h2>🧐 Features</h2>
