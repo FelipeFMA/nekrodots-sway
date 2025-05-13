@@ -110,7 +110,7 @@ bindsym $mod+e exec $filemanager
 bindsym $mod+p exec /home/felipe/.config/rofi/powermenu.sh
 
 # Clipboard history
-bindsym $mod+v exec cliphist list | wmenu -l 10 -f "SF Mono 10" -N 1b1b1b -n ffffff -M ffffff -m ffffff -S ffffff -s 1b1b1b
+bindsym $mod+v exec cliphist list | wmenu -l 10 -f "SF Mono 10" -N 1b1b1b -n ffffff -M ffffff -m ffffff -S ffffff -s 1b1b1b | cliphist decode | wl-copy
 
 # Emoji picker
 bindsym $mod+m exec rofi -modi emoji -show emoji
