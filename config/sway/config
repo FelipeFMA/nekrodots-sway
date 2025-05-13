@@ -2,7 +2,7 @@
 
 set $mod Mod4
 set $term alacritty msg create-window
-set $browser brave
+set $browser thorium-browser
 set $filemanager nemo
 
 ### Xwayland
@@ -100,7 +100,7 @@ bindsym $mod+Return exec $term
 bindsym $mod+q kill
 
 # Launcher
-bindsym $mod+d exec rofi -show drun
+bindsym $mod+d exec wmenu-run -f "SF Mono 10" -N 1b1b1b -n ffffff -M ffffff -m ffffff -S ffffff -s 1b1b1b
 
 # Browser
 bindsym $mod+w exec $browser
@@ -110,7 +110,7 @@ bindsym $mod+e exec $filemanager
 bindsym $mod+p exec /home/felipe/.config/rofi/powermenu.sh
 
 # Clipboard history
-bindsym $mod+v exec /home/felipe/.config/rofi/clipboard.sh
+bindsym $mod+v exec cliphist list | wmenu -l 10 -f "SF Mono 10" -N 1b1b1b -n ffffff -M ffffff -m ffffff -S ffffff -s 1b1b1b
 
 # Emoji picker
 bindsym $mod+m exec rofi -modi emoji -show emoji
