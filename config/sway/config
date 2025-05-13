@@ -112,6 +112,9 @@ bindsym $mod+p exec /home/felipe/.config/rofi/powermenu.sh
 # Clipboard history
 bindsym $mod+v exec /home/felipe/.config/rofi/clipboard.sh
 
+# Emoji picker
+bindsym $mod+m exec rofi -modi emoji -show emoji
+
 # Lock screen
 bindsym $mod+l exec ~/.config/sway/lock.sh
 
@@ -126,7 +129,7 @@ floating_modifier $mod normal
 bindsym $mod+c exec ~/.config/sway/reload.sh
 
 # Exit sway (logs you out of your Wayland session)
-bindsym $mod+m exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+bindsym $mod+n exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
 # Move your focus around
 bindsym $mod+Left focus left
