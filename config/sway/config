@@ -87,8 +87,8 @@ client.urgent           #282828 #282828 #838383 #282828 #282828
 client.placeholder      #282828 #282828 #838383 #282828 #282828
 client.background       #888888
 
-gaps inner 5
-gaps outer -2
+gaps inner 3
+gaps outer 0
 smart_gaps off
 
 ### Binds
@@ -100,7 +100,7 @@ bindsym $mod+Return exec $term
 bindsym $mod+q kill
 
 # Launcher
-bindsym $mod+d exec wmenu-run -f "SF Mono 10" -N 1b1b1b -n ffffff -M ffffff -m ffffff -S ffffff -s 1b1b1b
+bindsym $mod+d exec wmenu-run -b -f "SF Mono 10" -N 1b1b1b -n ffffff -M ffffff -m ffffff -S ffffff -s 1b1b1b
 
 # Browser
 bindsym $mod+w exec $browser
@@ -110,10 +110,7 @@ bindsym $mod+e exec $filemanager
 bindsym $mod+p exec /home/felipe/.config/rofi/powermenu.sh
 
 # Clipboard history
-bindsym $mod+v exec cliphist list | wmenu -l 10 -f "SF Mono 10" -N 1b1b1b -n ffffff -M ffffff -m ffffff -S ffffff -s 1b1b1b | cliphist decode | wl-copy
-
-# Emoji picker
-bindsym $mod+m exec rofi -modi emoji -show emoji
+bindsym $mod+v exec cliphist list | wmenu -b -l 10 -f "SF Mono 10" -N 1b1b1b -n ffffff -M ffffff -m ffffff -S ffffff -s 1b1b1b | cliphist decode | wl-copy
 
 # Lock screen
 bindsym $mod+l exec ~/.config/sway/lock.sh
