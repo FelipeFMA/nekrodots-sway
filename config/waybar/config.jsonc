@@ -1,8 +1,11 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 26,
-  "spacing": 4,
+  "height": 24,
+  "margin-top": 0,
+  "margin-left": 0,
+  "margin-right": 0,
+  "spacing": 6,
   "modules-left": [
     "sway/workspaces",
     "sway/mode",
@@ -89,7 +92,7 @@
     "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
     "format-linked": "  {ifname} (No IP)",
     "format-disconnected": "  Disconnected",
-    "on-click": "foot -e sh -c 'sleep 0.02 && nmtui'"
+    "on-click": "alacritty -e sh -c 'sleep 0.05 && nmtui'"
   },
   "pulseaudio": {
     "scroll-step": 5,
@@ -116,6 +119,6 @@
     "format": " On",
     "format-disabled": "󰂲 Off",
     "format-connected": "󰂱 Connected",
-    "on-click": "foot -e sh -c bluetuith"
+    "on-click": "alacritty -e sh -c bluetuith"
   }
 }

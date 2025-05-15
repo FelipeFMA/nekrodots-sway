@@ -8,3 +8,6 @@ if status is-interactive
 end
 
 fish_add_path /home/felipe/.spicetify
+
+# Created by `pipx` on 2025-05-15 12:48:16
+set PATH $PATH /home/felipe/.local/bin

@@ -7,7 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "theme": "macOS Classic Dark2",
+  "theme": "Gruvbox Dark",
   "edit_predictions": {
     "disabled_globs": [],
     "mode": "eager",
@@ -15,14 +15,21 @@
       "proxy": null,
       "proxy_no_verify": null
     },
-    "enabled_in_assistant": true
+    "enabled_in_text_threads": true
   },
   "terminal": {
     "dock": "bottom",
     "font_family": "SF Mono"
   },
-  "assistant": {
+  "agent": {
+    "always_allow_tool_actions": true,
     "profiles": {
+      "teste": {
+        "name": "teste",
+        "tools": {},
+        "enable_all_context_servers": false,
+        "context_servers": {}
+      },
       "ask": {
         "name": "Ask",
         "tools": {
@@ -43,7 +50,7 @@
           "fetch": true,
           "list_directory": true,
           "now": true,
-          "path_search": true,
+          "find_path": true,
           "read_file": true,
           "grep": true,
           "thinking": true,
@@ -56,7 +63,7 @@
     "default_profile": "write",
     "inline_assistant_model": {
       "provider": "openai",
-      "model": "google/gemini-2.0-flash-exp:free"
+      "model": "deepseek/deepseek-chat-v3-0324:free"
     },
     "default_model": {
       "provider": "google",
@@ -79,8 +86,8 @@
       "api_url": "https://openrouter.ai/api/v1",
       "available_models": [
         {
-          "name": "mistralai/mistral-7b-instruct:free",
-          "display_name": "mistral",
+          "name": "deepseek/deepseek-chat-v3-0324:free",
+          "display_name": "Deepseek v3",
           "max_tokens": 1000000
         },
         {

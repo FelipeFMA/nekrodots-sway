@@ -1,38 +1,50 @@
 * {
   font-family: "SF Pro";
-  font-size: 13px;
+  font-size: 12px;
 }
 
 window#waybar {
-  background-color: #1b1b1b;
-  color: #ffffff;
-  border-radius: 0px;
-  margin: 0;
-  border: none;
+  background-color: rgba(29, 32, 33, 0.85); /* Gruvbox bg0_h with alpha */
+  color: #ebdbb2; /* Gruvbox fg */
 }
 
 #workspaces {
-  margin: 0px 1px;
+  margin: 0px 0px;
   border: none;
+  padding: 2;
 }
 
 #workspaces button {
-  color: #ffffff;
+  color: rgba(235, 219, 178, 0.6); /* Gruvbox fg with alpha */
+  background: transparent;
   border-radius: 0px;
-  padding: 0 5px;
-  min-width: 20px;
-  min-height: 20px;
+  min-width: 22px;
+  min-height: 22px;
+  margin: 0px 0px;
+  padding: 0;
 }
 
 #workspaces button.focused {
-  background-color: #ffffff;
-  color: #1b1b1b;
+  background: #ebdbb2; /* Gruvbox fg */
+  color: #1d2021; /* Gruvbox bg0_h */
   border-radius: 0px;
+  min-width: 22px;
+  min-height: 22px;
 }
 
 #workspaces button.urgent {
-  background-color: #fb4934;
+  background-color: #fb4934; /* Gruvbox bright red (already Gruvbox) */
   border-radius: 0px;
+}
+
+#workspaces button:hover {
+  background-color: rgba(235, 219, 178, 0.1); /* Gruvbox fg with alpha */
+  border-radius: 0px;
+}
+
+#workspaces button.focused:hover {
+  background: #ebdbb2; /* Gruvbox fg */
+  color: #1d2021; /* Gruvbox bg0_h */
 }
 
 #clock,
@@ -41,26 +53,54 @@ window#waybar {
 #battery,
 #network,
 #pulseaudio {
-  padding: 0 10px;
-  color: #ffffff;
+  padding: 2;
+  color: #ebdbb2; /* Gruvbox fg */
+  border-radius: 0px;
+  margin: 1px 3px;
+}
+
+#battery {
+  padding: 2;
 }
 
 #battery.charging {
-  color: #00bb13;
+  color: #b8bb26; /* Gruvbox bright green */
 }
 
 #battery.warning:not(.charging) {
-  color: #ffb300;
+  color: #fabd2f; /* Gruvbox bright yellow */
 }
 
 #battery.critical:not(.charging) {
-  color: #d11500;
+  color: #cc241d; /* Gruvbox neutral red */
+  background-color: rgba(251, 73, 52, 0.1); /* Gruvbox bright red with alpha */
+}
+
+#network {
+  padding: 2;
 }
 
 #network.disconnected {
-  color: #c10000;
+  color: #cc241d; /* Gruvbox neutral red */
+  background-color: rgba(251, 73, 52, 0.1); /* Gruvbox bright red with alpha */
+}
+
+#pulseaudio {
+  padding: 2;
 }
 
 #pulseaudio.muted {
-  color: #a8a8a8;
+  color: #a89984; /* Gruvbox dark gray */
+}
+
+#bluetooth {
+  padding: 2;
+}
+
+#clock {
+  padding: 2;
+}
+
+#tray {
+  padding: 2;
 }

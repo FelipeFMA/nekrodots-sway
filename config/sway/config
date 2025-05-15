@@ -22,7 +22,7 @@ exec /usr/lib/xdg-desktop-portal-wlr
 ### Output configuration
 
 # Wallpaper
-output * bg /home/felipe/Pictures/Wallpapers/sky.png fill
+output * bg /home/felipe/Pictures/Wallpapers/anime_skull.png fill
 
 # Mouse cursor
 seat seat0 xcursor_theme macOS 24
@@ -80,16 +80,16 @@ default_floating_border normal
 hide_edge_borders none
 font pango:"Roboto" Regular 12
 
-client.focused          #888888 #888888 #ffffff #888888 #888888
-client.focused_inactive #282828 #282828 #838383 #282828 #282828
-client.unfocused        #282828 #282828 #838383 #282828 #282828
-client.urgent           #282828 #282828 #838383 #282828 #282828
-client.placeholder      #282828 #282828 #838383 #282828 #282828
-client.background       #888888
+client.focused          #ebdbb2 #3c3836 #ebdbb2 #ebdbb2 #ebdbb2
+client.focused_inactive #7c6f64 #282828 #a89984 #504945 #282828
+client.unfocused        #504945 #282828 #a89984 #504945 #282828
+client.urgent           #fb4934 #282828 #fbf1c7 #fb4934 #fb4934
+client.placeholder      #282828 #1d2021 #7c6f64 #282828 #1d2021
+client.background       #282828
 
 gaps inner 3
 gaps outer 0
-smart_gaps off
+smart_gaps on
 
 ### Binds
 
@@ -100,17 +100,17 @@ bindsym $mod+Return exec $term
 bindsym $mod+q kill
 
 # Launcher
-bindsym $mod+d exec wmenu-run -b -f "SF Mono 10" -N 1b1b1b -n ffffff -M ffffff -m ffffff -S ffffff -s 1b1b1b
+bindsym $mod+d exec wmenu-run -b -f "SF Mono 10" -N 282828 -n ebdbb2 -M 3c3836 -m fe8019 -S 458588 -s ebdbb2
 
 # Browser
 bindsym $mod+w exec $browser
 bindsym $mod+e exec $filemanager
 
 # Power menu
-bindsym $mod+p exec /home/felipe/.config/rofi/powermenu.sh
+bindsym $mod+p exec /home/felipe/.config/sway/powermenu.sh
 
 # Clipboard history
-bindsym $mod+v exec cliphist list | wmenu -b -l 10 -f "SF Mono 10" -N 1b1b1b -n ffffff -M ffffff -m ffffff -S ffffff -s 1b1b1b | cliphist decode | wl-copy
+bindsym $mod+v exec cliphist list | wmenu -b -l 10 -f "SF Mono 10" -N 282828 -n ebdbb2 -M 3c3836 -m fe8019 -S 458588 -s ebdbb2 | cliphist decode | wl-copy
 
 # Lock screen
 bindsym $mod+l exec ~/.config/sway/lock.sh

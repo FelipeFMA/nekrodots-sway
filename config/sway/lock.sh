@@ -2,24 +2,24 @@
 
 swaylock \
   --indicator-radius 100 \
-  --indicator-thickness 20 \
-  --inside-color 1b1b1b \
-  --inside-clear-color 1b1b1b \
-  --inside-ver-color 1b1b1b \
-  --inside-wrong-color 1b1b1b \
-  --key-hl-color ffffff \
-  --bs-hl-color 000000 \
-  --ring-color 000000 \
-  --ring-clear-color 000000 \
-  --ring-wrong-color 000000 \
-  --ring-ver-color 000000 \
-  --line-color 000000 \
+  --indicator-thickness 10 \
+  --inside-color 282828 \
+  --inside-clear-color 282828 \
+  --inside-ver-color 282828 \
+  --inside-wrong-color 282828 \
+  --key-hl-color ebdbb2 \
+  --bs-hl-color cc241d \
+  --ring-color 928374 \
+  --ring-clear-color 98971a \
+  --ring-wrong-color cc241d \
+  --ring-ver-color d79921 \
+  --line-color 282828 \
   --font 'Roboto' \
-  --text-color ffffff \
-  --text-clear-color ffffff \
+  --text-color ebdbb2 \
+  --text-clear-color 98971a \
   --text-wrong-color ff0000 \
   --text-ver-color ffffff \
-  --image ~/Pictures/Wallpapers/sky.png \
+  --image ~/Pictures/Wallpapers/anime_skull.png \
   --clock \
   --indicator \
   --timestr '%I:%M %p' \
