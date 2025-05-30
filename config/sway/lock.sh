@@ -19,7 +19,7 @@ swaylock \
   --text-clear-color 98971a \
   --text-wrong-color ff0000 \
   --text-ver-color ffffff \
-  --image ~/Pictures/Wallpapers/anime_skull.png \
+  --image ~/Pictures/Wallpapers/castle.jpg \
   --clock \
   --indicator \
   --timestr '%I:%M %p' \

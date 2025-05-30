@@ -92,7 +92,7 @@
     "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
     "format-linked": "  {ifname} (No IP)",
     "format-disconnected": "  Disconnected",
-    "on-click": "alacritty -e sh -c 'sleep 0.05 && nmtui'"
+    "on-click": "footclient -e sh -c 'sleep 0.05 && nmtui'"
   },
   "pulseaudio": {
     "scroll-step": 5,
@@ -119,6 +119,6 @@
     "format": " On",
     "format-disabled": "󰂲 Off",
     "format-connected": "󰂱 Connected",
-    "on-click": "alacritty -e sh -c bluetuith"
+    "on-click": "blueberry"
   }
 }

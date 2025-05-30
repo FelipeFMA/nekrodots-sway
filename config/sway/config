@@ -1,18 +1,18 @@
 ### Variables
 
 set $mod Mod4
-set $term alacritty msg create-window
-set $browser thorium-browser
+set $term footclient
+set $browser chrome
 set $filemanager nemo
 
 ### Xwayland
 xwayland enable
 
 ### Autostart
-exec perf.sh -h
+exec ~/.config/sway/priority.sh
 exec waybar
 exec autotiling
-exec alacritty --daemon
+exec foot -s
 exec wl-paste --watch cliphist store
 exec rm ~/.cache/cliphist/db
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -22,7 +22,7 @@ exec /usr/lib/xdg-desktop-portal-wlr
 ### Output configuration
 
 # Wallpaper
-output * bg /home/felipe/Pictures/Wallpapers/anime_skull.png fill
+output * bg /home/felipe/Pictures/Wallpapers/castle.jpg fill
 
 # Mouse cursor
 seat seat0 xcursor_theme macOS 24
@@ -36,7 +36,7 @@ include ~/.config/sway/workspaces
 ### Idle configuration
 exec swayidle -w \
     timeout 300 '~/.config/sway/lock.sh' \
-    timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+    timeout 300 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
     before-sleep '~/.config/sway/lock.sh'
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -78,7 +78,7 @@ input type:keyboard xkb_numlock enabled
 default_border pixel 2
 default_floating_border normal
 hide_edge_borders none
-font pango:"Roboto" Regular 12
+font pango:"SF Pro" Regular 12
 
 client.focused          #ebdbb2 #3c3836 #ebdbb2 #ebdbb2 #ebdbb2
 client.focused_inactive #7c6f64 #282828 #a89984 #504945 #282828
@@ -87,8 +87,8 @@ client.urgent           #fb4934 #282828 #fbf1c7 #fb4934 #fb4934
 client.placeholder      #282828 #1d2021 #7c6f64 #282828 #1d2021
 client.background       #282828
 
-gaps inner 3
-gaps outer 0
+gaps inner 1
+gaps outer 1
 smart_gaps on
 
 ### Binds
@@ -100,7 +100,7 @@ bindsym $mod+Return exec $term
 bindsym $mod+q kill
 
 # Launcher
-bindsym $mod+d exec wmenu-run -b -f "SF Mono 10" -N 282828 -n ebdbb2 -M 3c3836 -m fe8019 -S 458588 -s ebdbb2
+bindsym $mod+d exec wmenu-run -b -f "SF Mono 12" -N 282828 -n ebdbb2 -M 3c3836 -m fe8019 -S 458588 -s ebdbb2
 
 # Browser
 bindsym $mod+w exec $browser
@@ -110,10 +110,13 @@ bindsym $mod+e exec $filemanager
 bindsym $mod+p exec /home/felipe/.config/sway/powermenu.sh
 
 # Clipboard history
-bindsym $mod+v exec cliphist list | wmenu -b -l 10 -f "SF Mono 10" -N 282828 -n ebdbb2 -M 3c3836 -m fe8019 -S 458588 -s ebdbb2 | cliphist decode | wl-copy
+bindsym $mod+v exec cliphist list | wmenu -b -l 10 -f "SF Mono 12" -N 282828 -n ebdbb2 -M 3c3836 -m fe8019 -S 458588 -s ebdbb2 | cliphist decode | wl-copy
 
 # Lock screen
 bindsym $mod+l exec ~/.config/sway/lock.sh
+
+# Night filter
+bindsym $mod+k exec ~/.config/sway/wlsunset.sh
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.

@@ -1,43 +1,43 @@
-set default-fg                rgba(255,255,255,1)     # white text
-set default-bg               rgba(27,27,27,1)         # dark background
+set default-fg                rgba(235,219,178,1)     # gruvbox light1 (beige text)
+set default-bg               rgba(29,32,33,1)         # gruvbox dark0_hard (dark gray background)
 
-set completion-bg            rgba(27,27,27,1)
-set completion-fg            rgba(255,255,255,1)
-set completion-highlight-bg  rgba(50,50,50,1)         # slightly lighter gray for highlights
-set completion-highlight-fg  rgba(255,255,255,1)
-set completion-group-bg      rgba(27,27,27,1)
-set completion-group-fg      rgba(255,255,255,1)
+set completion-bg            rgba(29,32,33,1)         # gruvbox dark0_hard
+set completion-fg            rgba(235,219,178,1)     # gruvbox light1
+set completion-highlight-bg  rgba(60,56,54,1)         # gruvbox dark1 (medium-dark gray for highlights)
+set completion-highlight-fg  rgba(235,219,178,1)     # gruvbox light1
+set completion-group-bg      rgba(29,32,33,1)         # gruvbox dark0_hard
+set completion-group-fg      rgba(131,165,152,1)     # gruvbox bright_blue (for group titles)
 
-set statusbar-fg            rgba(255,255,255,1)
-set statusbar-bg            rgba(27,27,27,1)
+set statusbar-fg            rgba(235,219,178,1)     # gruvbox light1
+set statusbar-bg            rgba(29,32,33,1)         # gruvbox dark0_hard
 
-set notification-bg         rgba(27,27,27,1)
-set notification-fg         rgba(255,255,255,1)
-set notification-error-bg   rgba(27,27,27,1)
-set notification-error-fg   rgba(255,255,255,1)
-set notification-warning-bg rgba(27,27,27,1)
-set notification-warning-fg rgba(255,255,255,1)
+set notification-bg         rgba(29,32,33,1)         # gruvbox dark0_hard
+set notification-fg         rgba(235,219,178,1)     # gruvbox light1
+set notification-error-bg   rgba(29,32,33,1)         # gruvbox dark0_hard
+set notification-error-fg   rgba(251,73,52,1)       # gruvbox bright_red
+set notification-warning-bg rgba(29,32,33,1)         # gruvbox dark0_hard
+set notification-warning-fg rgba(250,189,47,1)     # gruvbox bright_yellow
 
-set inputbar-fg             rgba(255,255,255,1)
-set inputbar-bg             rgba(27,27,27,1)
+set inputbar-fg             rgba(235,219,178,1)     # gruvbox light1
+set inputbar-bg             rgba(29,32,33,1)         # gruvbox dark0_hard
 
 # Enable recolor by default for dark mode
 set recolor                "true"
 set recolor-keephue        "true"
-set recolor-lightcolor     rgba(27,27,27,1)
-set recolor-darkcolor      rgba(255,255,255,1)
+set recolor-lightcolor     rgba(29,32,33,1)         # gruvbox dark0_hard (new background for recolored pages)
+set recolor-darkcolor      rgba(235,219,178,1)     # gruvbox light1 (new foreground for recolored pages)
 
-set index-fg               rgba(255,255,255,1)
-set index-bg               rgba(27,27,27,1)
-set index-active-fg        rgba(255,255,255,1)
-set index-active-bg        rgba(50,50,50,1)           # slightly lighter gray for active element
+set index-fg               rgba(235,219,178,1)     # gruvbox light1
+set index-bg               rgba(29,32,33,1)         # gruvbox dark0_hard
+set index-active-fg        rgba(250,189,47,1)     # gruvbox bright_yellow (for active item text)
+set index-active-bg        rgba(60,56,54,1)         # gruvbox dark1 (medium-dark gray for active element background)
 
-set render-loading-bg      rgba(27,27,27,1)
-set render-loading-fg      rgba(255,255,255,1)
+set render-loading-bg      rgba(29,32,33,1)         # gruvbox dark0_hard
+set render-loading-fg      rgba(235,219,178,1)     # gruvbox light1
 
-set highlight-color        rgba(100,100,100,0.5)      # gray for highlights
-set highlight-fg           rgba(255,255,255,0.5)
-set highlight-active-color rgba(100,100,100,0.5)
+set highlight-color        rgba(80,73,69,0.5)       # gruvbox dark2 (gray) with alpha for selection background
+set highlight-fg           rgba(235,219,178,0.5)   # gruvbox light1 with alpha for selection foreground
+set highlight-active-color rgba(215,153,33,0.5)    # gruvbox neutral_yellow with alpha for active search highlight
 
 # Use 'r' key to toggle between dark mode and normal mode for images
 map r recolor
