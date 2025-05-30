@@ -1,4 +1,4 @@
-function felipao-tunnel --wraps='ssh -D 1080 -p 443 -fN felipe@134.65.28.106' --description 'alias felipao-tunnel=ssh -D 1080 -p 443 -fN felipe@134.65.28.106'
-  ssh -D 1080 -p 443 -fN felipe@134.65.28.106 $argv
+function felipao-tunnel --wraps='ssh -D xxxx -p xxx -fN felipe@xxx.xxx.xxx.xx' --description 'alias felipao-tunnel=ssh -D xxxx -p xxx -fN felipe@xxx.xxx.xxx.xx'
+  ssh -D 1080 -p 443 -fN felipe@xxx.xxx.xxx.xx $argv
         
 end

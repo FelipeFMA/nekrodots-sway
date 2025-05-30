@@ -1,5 +1,5 @@
-function felipao --wraps='clear; ssh felipe@134.65.28.106' --description 'alias felipao=clear; ssh felipe@134.65.28.106'
+function felipao --wraps='clear; ssh felipe@xxx.xxx.xxx.xx' --description 'alias felipao=clear; ssh felipe@xxx.xxx.xxx.xx'
     clear
-    ssh -p 22 felipe@134.65.28.106 $argv
+    ssh -p 22 felipe@xxx.xxx.xxx.xx $argv
 
 end
