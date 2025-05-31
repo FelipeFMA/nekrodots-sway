@@ -55,10 +55,13 @@ input "1:1:AT_Translated_Set_2_keyboard" {
     xkb_variant thinkpad
 }
 
-# Turn off mouse accel
+# Mouse stuff
 input "12625:16429:2.4G_Wireless_Mouse" {
     accel_profile "flat"
 }
+
+focus_follows_mouse always
+mouse_warping container
 
 # Usual trackpad stuff
 input "1739:0:Synaptics_TM3276-022" {
