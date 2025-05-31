@@ -87,9 +87,11 @@ client.urgent           #fb4934 #282828 #fbf1c7 #fb4934 #fb4934
 client.placeholder      #282828 #1d2021 #7c6f64 #282828 #1d2021
 client.background       #282828
 
-gaps inner 1
+gaps inner 2
 gaps outer 1
-smart_gaps on
+shadows enable
+blur enable
+corner_radius 4
 
 ### Binds
 
@@ -199,13 +201,7 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-# A mode to kill every window you click (kinda like xkill)
-mode "xkill" {
-    bindsym --whole-window button1 kill
-    bindsym Escape mode "default"
-    bindsym Return mode "default"
-}
-bindsym $mod+x mode "xkill"
+bindsym $mod+x exec ~/.config/sway/kill.sh
 
 # Special keys to adjust volume via PulseAudio
 bindsym --locked XF86AudioMute exec pactl set-sink-mute \@DEFAULT_SINK@ toggle && ~/.config/dunst/volume.sh
