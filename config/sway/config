@@ -59,9 +59,12 @@ input "1:1:AT_Translated_Set_2_keyboard" {
 input "12625:16429:2.4G_Wireless_Mouse" {
     accel_profile "flat"
 }
+input "12625:16426:X3PRO" {
+    accel_profile "flat"
+}
 
-focus_follows_mouse always
-mouse_warping container
+# focus_follows_mouse always
+# mouse_warping container
 
 # Usual trackpad stuff
 input "1739:0:Synaptics_TM3276-022" {
@@ -82,6 +85,8 @@ default_border pixel 2
 default_floating_border normal
 hide_edge_borders none
 font pango:"SF Pro" Regular 12
+for_window [class=".*"]  border pixel 2
+for_window [app_id=".*"] border pixel 2
 
 client.focused          #ebdbb2 #3c3836 #ebdbb2 #ebdbb2 #ebdbb2
 client.focused_inactive #7c6f64 #282828 #a89984 #504945 #282828
@@ -92,9 +97,11 @@ client.background       #282828
 
 gaps inner 2
 gaps outer 1
-shadows enable
-blur enable
-corner_radius 4
+
+# These only work on swayfx
+# shadows enable
+# blur enable
+# corner_radius 4
 
 ### Binds
 
